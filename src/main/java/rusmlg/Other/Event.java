@@ -1,6 +1,7 @@
 package rusmlg.Other;
 
 import java.text.DateFormat;
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -39,6 +40,11 @@ public class Event {
 
     public int getId() {
         return id;
+    }
+
+    public static boolean isDay(int start, int end) {
+        LocalTime time = LocalTime.now();
+        return time.getHour() > start && time.getHour() < end;
     }
 
     @Override

@@ -18,6 +18,7 @@ public class App {
     private Map<EventType, EventLogger> loggers;
 
 
+
     public App(Client client, EventLogger eventLogger, Map<EventType, EventLogger> loggers) {
         super();
         this.client = client;
@@ -52,5 +53,6 @@ public class App {
         }
         logger.logEvent(event);
     }
+
 
 }
